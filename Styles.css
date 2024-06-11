@@ -80,6 +80,59 @@ main h2 {
     margin-top: 0;
     font-weight: 700;
 }
+/* Add subMenu */
+
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.submenu li a:hover {
+    background: #555;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Adjust the styles for smaller screens */
+@media (max-width: 768px) {
+    .submenu {
+        position: static;
+    }
+
+    .has-submenu:hover .submenu {
+        display: none;
+    }
+
+    .has-submenu .submenu {
+        display: block;
+    }
+}
 
 .background-img {
     width: 100%;
