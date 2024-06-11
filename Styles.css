@@ -14,7 +14,7 @@ header {
 
 .cover-gif {
     width: 100%;
-    height: auto;
+    height: fit-content;
 }
 
 .header-content h1 {
